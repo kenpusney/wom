@@ -66,7 +66,7 @@
 		context = canvas.getContext("2d");
 
 		images.character = new Image();
-		images.character.src = '/img/running.png'
+		images.character.src = 'img/running.png'
 		function tick() {
 			stage.render();
 		}
