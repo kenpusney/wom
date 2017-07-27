@@ -1,1 +1,63 @@
-<h1 style="text-align: center">Walk on the moon</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Document</title>
+    <style type="text/css">
+        html {
+            height: 100vh;
+        }
+
+        .container {
+            background: linear-gradient(45deg, darkblue, black);
+            clear: both;
+        }
+
+        .moon {
+            position: fixed;
+            bottom: -75vw;
+            height: 100vw;
+            width: 100vw;
+            z-index: -1;
+        }
+
+        @keyframes rotating {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .rotating {
+            animation: rotating 18s linear infinite;
+        }
+
+        .globe {
+            float: right;
+            background-image: url(img/globe.png);
+            background-size: cover;
+            height: 30vh;
+            width: 30vh;
+        }
+
+        .boy {
+            position: fixed;
+            bottom: 13vw;
+            width: 88px;
+            height: 151px;
+            left: 40vw;
+        }
+
+    </style>
+</head>
+<body class="container">
+        <div class="globe"></div>
+        <canvas id="kannwas" class="boy"></canvas>
+        <img class="moon rotating" src="img/purple.png" />
+        <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
